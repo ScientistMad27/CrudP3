@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Registro </title>
+</head>
+<body >
+
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages%}
+             {% for message in messages%}
+                <h4 class="email_exist">{{message}}</h4>
+             {% endfor %}
+        {% endif%}
+
+    {% endwith %}
+
+    <div class="signupFrm">
+        <form action="/register" method="POST" class="form">
+          <h1 class="title">Sign up</h1>
+    
+          <div class="inputContainer">
+            <input type="text" name="email" class="input" placeholder="a">
+            <label for="" class="label">Email</label>
+          </div>
+          
+          <div class="inputContainer">
+            <input type="text" name="username" class="input" placeholder="a">
+            <label for="" class="label">Username</label>
+          </div>
+    
+          <div class="inputContainer">
+            <input type="text" name="password" class="input" placeholder="a">
+            <label for="" class="label">Password</label>
+          </div>
+          
+          <input type="submit" class="submitBtn" value="Registrar">
+        </form>
+      </div>
+
+    
+    <div class="div-register">
+       
+    
+
+        
+</body>
+</html>
